@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "AIPanel",
+  "version": "1.0.0",
+  "description": "AI Chat Panel - Chat with AI in side panel",
+  "icons": {
+    "128": "assets/icons/icon.png"
+  },
+  "permissions": ["storage", "tabs", "sidePanel"],
+  "host_permissions": ["https://*/*", "http://*/*"],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; connect-src 'self' https: http:;"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Open AI Panel"
+  }
+}
